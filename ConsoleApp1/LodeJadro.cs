@@ -227,21 +227,21 @@ public class LodeJadro
                     // kontrola pod sebou pri prvnim bloku
                     try
                     {
-                        if (poleHrace[radek - i + 1, sloupec] == ZnakLode) throw new ArgumentException();
+                        if (poleHrace[radek + i + 1, sloupec] == ZnakLode) throw new ArgumentException();
                     }
                     catch (IndexOutOfRangeException e)
                     { }
                     // kontrola na prave strane
                     try
                     {
-                        if (radek - i + 1 <= 5)
+                        if (radek + i + 1 <= 5)
                         {
-                            if(poleHrace[radek - i + 1, sloupec + 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek + i + 1, sloupec + 1] == ZnakLode) throw new ArgumentException();
                         }
-                        if(poleHrace[radek - i, sloupec + 1] == ZnakLode) throw new ArgumentException();
-                        if (radek - i - 1 >= 0)
+                        if(poleHrace[radek + i, sloupec + 1] == ZnakLode) throw new ArgumentException();
+                        if (radek + i - 1 >= 0)
                         {
-                            if(poleHrace[radek - i - 1, sloupec + 1] == ZnakLode) throw new ArgumentException(); 
+                            if(poleHrace[radek + i - 1, sloupec + 1] == ZnakLode) throw new ArgumentException(); 
                         }
                     }
                     catch (IndexOutOfRangeException e)
@@ -249,14 +249,14 @@ public class LodeJadro
                     // kontrola na leve strane
                     try
                     {
-                        if (radek - i + 1 <= 5)
+                        if (radek + i + 1 <= 5)
                         {
-                            if(poleHrace[radek - i + 1, sloupec - 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek + i + 1, sloupec - 1] == ZnakLode) throw new ArgumentException();
                         }
-                        if(poleHrace[radek - i, sloupec - 1] == ZnakLode) throw new ArgumentException();
-                        if (radek - i - 1 >= 0)
+                        if(poleHrace[radek + i, sloupec - 1] == ZnakLode) throw new ArgumentException();
+                        if (radek + i - 1 >= 0)
                         {
-                            if(poleHrace[radek - i - 1, sloupec - 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek + i - 1, sloupec - 1] == ZnakLode) throw new ArgumentException();
                         }
                     }
                     catch (IndexOutOfRangeException e)
@@ -266,7 +266,7 @@ public class LodeJadro
                     {
                         try
                         {
-                            if (poleHrace[radek - i - 1, sloupec] == ZnakLode) throw new ArgumentException();
+                            if (poleHrace[radek + i - 1, sloupec] == ZnakLode) throw new ArgumentException();
                         }
                         catch (IndexOutOfRangeException e)
                         { }
@@ -293,24 +293,24 @@ public class LodeJadro
                     // kontrola pod sebou pri prvnim bloku
                     try
                     {
-                        if (poleHrace[radek - i + 1, sloupec] == ZnakLode) throw new ArgumentException();
+                        if (poleHrace[radek + 1, sloupec - i] == ZnakLode) throw new ArgumentException();
                     }
                     catch (IndexOutOfRangeException e)
                     { }
                     // kontrola na prave strane
                     try
                     {
-                        if (radek - i + 1 <= 5)
+                        if (radek + 1 <= 5)
                         {
-                            if(poleHrace[radek - i + 1, sloupec + 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek + 1, sloupec - i + 1] == ZnakLode) throw new ArgumentException();
                         }
                         if (i == 0)
                         {
-                            if(poleHrace[radek - i, sloupec + 1] == ZnakLode) throw new ArgumentException();  
+                            if(poleHrace[radek, sloupec - i + 1] == ZnakLode) throw new ArgumentException();  
                         }
-                        if (radek - i - 1 >= 0)
+                        if (radek - 1 >= 0)
                         {
-                            if(poleHrace[radek - i - 1, sloupec + 1] == ZnakLode) throw new ArgumentException();  
+                            if(poleHrace[radek - 1, sloupec - i + 1] == ZnakLode) throw new ArgumentException();  
                         }
                     }
                     catch (IndexOutOfRangeException e)
@@ -318,14 +318,14 @@ public class LodeJadro
                     // kontrola na leve strane
                     try
                     {
-                        if (radek - i + 1 <= 5)
+                        if (radek + 1 <= 5)
                         {
-                            if(poleHrace[radek - i + 1, sloupec - 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek + 1, sloupec - i - 1] == ZnakLode) throw new ArgumentException();
                         }
-                        if(poleHrace[radek - i, sloupec - 1] == ZnakLode) throw new ArgumentException();
-                        if (radek - i - 1 >= 0)
+                        if(poleHrace[radek, sloupec - i - 1] == ZnakLode) throw new ArgumentException();
+                        if (radek - 1 >= 0)
                         {
-                            if(poleHrace[radek - i - 1, sloupec - 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek - 1, sloupec - i - 1] == ZnakLode) throw new ArgumentException();
                         }
                     }
                     catch (IndexOutOfRangeException e)
@@ -333,7 +333,7 @@ public class LodeJadro
                     // kontrola nad sebou
                     try
                     {
-                        if (poleHrace[radek - i - 1, sloupec] == ZnakLode) throw new ArgumentException();
+                        if (poleHrace[radek - 1, sloupec - i] == ZnakLode) throw new ArgumentException();
                     }
                     catch (IndexOutOfRangeException e)
                     { }
@@ -359,21 +359,21 @@ public class LodeJadro
                     // kontrola pod sebou pri prvnim bloku
                     try
                     {
-                        if (poleHrace[radek - i + 1, sloupec] == ZnakLode) throw new ArgumentException();
+                        if (poleHrace[radek + 1, sloupec + i] == ZnakLode) throw new ArgumentException();
                     }
                     catch (IndexOutOfRangeException e)
                     { }
                     // kontrola na prave strane
                     try
                     {
-                        if (radek - i + 1 <= 5)
+                        if (radek + 1 <= 5)
                         {
-                            if(poleHrace[radek - i + 1, sloupec + 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek + 1, sloupec + i + 1] == ZnakLode) throw new ArgumentException();
                         }
-                        if(poleHrace[radek - i, sloupec + 1] == ZnakLode) throw new ArgumentException();
-                        if (radek - i - 1 >= 0)
+                        if(poleHrace[radek, sloupec + i + 1] == ZnakLode) throw new ArgumentException();
+                        if (radek - 1 >= 0)
                         {
-                            if(poleHrace[radek - i - 1, sloupec + 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek - 1, sloupec + i + 1] == ZnakLode) throw new ArgumentException();
                         }
                     }
                     catch (IndexOutOfRangeException e)
@@ -381,17 +381,17 @@ public class LodeJadro
                     // kontrola na leve strane
                     try
                     {
-                        if (radek - i + 1 <= 5)
+                        if (radek + 1 <= 5)
                         {
-                            if(poleHrace[radek - i + 1, sloupec - 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek + 1, sloupec + i - 1] == ZnakLode) throw new ArgumentException();
                         }
                         if (i == 0)
                         {
-                            if(poleHrace[radek - i, sloupec - 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek, sloupec + i - 1] == ZnakLode) throw new ArgumentException();
                         }
-                        if (radek - i - 1 >= 0)
+                        if (radek - 1 >= 0)
                         {
-                            if(poleHrace[radek - i - 1, sloupec - 1] == ZnakLode) throw new ArgumentException();
+                            if(poleHrace[radek - 1, sloupec + i - 1] == ZnakLode) throw new ArgumentException();
                         }
                     }
                     catch (IndexOutOfRangeException e)
@@ -399,7 +399,7 @@ public class LodeJadro
                     // kontrola nad sebou
                     try
                     {
-                        if (poleHrace[radek - i - 1, sloupec] == ZnakLode) throw new ArgumentException();
+                        if (poleHrace[radek - 1, sloupec + i] == ZnakLode) throw new ArgumentException();
                     }
                     catch (IndexOutOfRangeException e)
                     { }
