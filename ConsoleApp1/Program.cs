@@ -12,8 +12,11 @@ Console.WriteLine("========== Lodě ==========");
 const int velikostHracihoPole = 7;
 string[,] hracPole = new string[velikostHracihoPole, velikostHracihoPole];
 string[,] nepritelPole = new string[velikostHracihoPole, velikostHracihoPole];
+string[,] nepritelPoleZasahy = new string[velikostHracihoPole, velikostHracihoPole];
 
-core.VynulujPole(hracPole, nepritelPole);  
+core.VynulujPole(hracPole);  
+core.VynulujPole(nepritelPole);  
+core.VynulujPole(nepritelPoleZasahy);  
 
 protihrac.VygenerujPoleNepritele(nepritelPole);
 
@@ -26,18 +29,6 @@ Console.WriteLine("Potopte nepřátelské lodě dříve, než on ty Vaše!\n");
 
 core.PostavPoleHrace(hracPole);
 
-//jadro.ZahajHru();
-
-
-
-
-
-
-
-
-
-
-
-
+core.ZahajHru(hracPole, nepritelPole, nepritelPoleZasahy);
 
 

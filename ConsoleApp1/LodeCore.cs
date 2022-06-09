@@ -9,15 +9,14 @@ public class LodeCore
     private const string ZnakZasahu = "\u2573";
     private const string ZnakStrely = "\u25A2";
     
-    // vrati obe pole do puvodni podoby
-    public void VynulujPole(string[,] hracPole, string[,] nepritelPole)
+    // vrati pole do puvodni podoby
+    public void VynulujPole(string[,] hracPole)
     {
         for (int i = 0; i < hracPole.GetLength(0); i++)
         {
             for (int j = 0; j < hracPole.GetLength(1); j++)
             {
                 hracPole[i, j] = " ";
-                nepritelPole[i, j] = " ";
             }
         }
     }
@@ -424,5 +423,28 @@ public class LodeCore
         
         
         
+    }
+
+    public void ZahajHru(string[,] hracPole, string[,] nepritelPole, string[,] nepritelPoleZasahy)
+    {
+        // loop samotne hry
+        while (true)
+        {   
+            Console.Write("Napiš souřadnice, na které chceš vystřelit! ");
+            string strela = Console.ReadLine();
+            if (strela.Length != 2 || !char.IsLetter(strela.Substring(0, 1).ToCharArray()[0]) ||
+                !int.TryParse(strela.Substring(1, 1), out _))
+            {
+                Console.WriteLine("Nesprávný input. Zkuste to znovu.");
+                continue;
+            }
+            
+            
+            
+            
+            
+            
+            
+        }
     }
 }

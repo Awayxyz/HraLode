@@ -65,6 +65,11 @@ public class LodeNepritel
         int index = _rand.Next(0, volneIndexy.Count);
         return volneIndexy[index];
     }
+
+    public void Vystrel(string[,] hracPole)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 
