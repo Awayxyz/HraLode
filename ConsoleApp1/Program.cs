@@ -1,27 +1,32 @@
 ﻿// Patrik Mašlaň, 2.B, x.6.2022, PVA, Program Lodě
 
-using System.Threading.Channels;
 using ConsoleApp1;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-var jadro = new LodeJadro();
+var core = new LodeCore();
 var protihrac = new LodeNepritel();
 
-Console.WriteLine("========== Lode ==========");
+Console.WriteLine("========== Lodě ==========");
 
-const int velikostHracihoPole = 6;
+const int velikostHracihoPole = 7;
 string[,] hracPole = new string[velikostHracihoPole, velikostHracihoPole];
 string[,] nepritelPole = new string[velikostHracihoPole, velikostHracihoPole];
 
-jadro.VynulujPole(hracPole, nepritelPole);  
+core.VynulujPole(hracPole, nepritelPole);  
 
 protihrac.VygenerujPoleNepritele(nepritelPole);
 
-// Pravidla hry
-Console.WriteLine("Potopte nepratelske lode drive, nez on ty Vase!\n");
+// test
+core.VykresliPoleHrace(nepritelPole);
+// test
 
-jadro.PostavPoleHrace(hracPole);
+// Pravidla hry
+Console.WriteLine("Potopte nepřátelské lodě dříve, než on ty Vaše!\n");
+
+core.PostavPoleHrace(hracPole);
+
+//jadro.ZahajHru();
 
 
 
