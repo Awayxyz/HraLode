@@ -1,19 +1,20 @@
-﻿namespace ConsoleApp1;
+﻿using System.Threading.Channels;
 
-public class LodeNepritel
+namespace ConsoleApp1;
+
+public class LodeProtihrac
 {
     private LodeCore _core = new LodeCore();
     private Random _rand = new Random();
-    
+
     public void VygenerujPoleNepritele(string[,] nepritelPole)
     {
-        
         InicializujLodProtihrace(4, nepritelPole);
         InicializujLodProtihrace(3, nepritelPole);
         InicializujLodProtihrace(2, nepritelPole);
         InicializujLodProtihrace(2, nepritelPole);
         InicializujLodProtihrace(1, nepritelPole);
-
+        InicializujLodProtihrace(1, nepritelPole);
     }
 
     public void InicializujLodProtihrace(int delkaLodi, string[,] nepritelPole)
@@ -53,7 +54,7 @@ public class LodeNepritel
     
     public Tuple<int, int> VygenerujSouradnice(string[,] nepritelPole)
     {
-        List<Tuple<int, int>> volneIndexy = new List<Tuple<int, int>>();
+        List<Tuple<int, int>> volneIndexy = new List<Tuple<int, int>>(LodeCore.VelikostHracihoPole*LodeCore.VelikostHracihoPole);
         for (int i = 0; i < nepritelPole.GetLength(0); i++)
         {
             for (int j = 0; j < nepritelPole.GetLength(1); j++)
@@ -64,11 +65,6 @@ public class LodeNepritel
         }
         int index = _rand.Next(0, volneIndexy.Count);
         return volneIndexy[index];
-    }
-
-    public void Vystrel(string[,] hracPole)
-    {
-        throw new NotImplementedException();
     }
 }
 
