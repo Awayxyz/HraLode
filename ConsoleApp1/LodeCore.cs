@@ -435,8 +435,8 @@ public class LodeCore
 
     public void ZahajHru(string[,] hracPole, string[,] nepritelPole, string[,] nepritelPoleZasahy)
     {
-        List<Tuple<int, int>> zasahleLode = new List<Tuple<int, int>>();
-        List<Tuple<int, int>> zasahleIndexy = new List<Tuple<int, int>>();
+        List<Tuple<int, int>> zasahleLode = new();
+        List<Tuple<int, int>> zasahleIndexy = new();
         
         List<Tuple<int, int>> zasahleLodeProtihrace = new();
         List<Tuple<int, int>> zasahleIndexyProtihrace = new();
