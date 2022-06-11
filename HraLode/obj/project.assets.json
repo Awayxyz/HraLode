@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\patri\\OneDrive\\Dokumenty\\C but sharp\\HraLode\\ConsoleApp1\\ConsoleApp1.csproj",
-      "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\patri\\OneDrive\\Dokumenty\\C but sharp\\HraLode\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\patri\\OneDrive\\Dokumenty\\C but sharp\\HraLode\\HraLode\\HraLode.csproj",
+      "projectName": "HraLode",
+      "projectPath": "C:\\Users\\patri\\OneDrive\\Dokumenty\\C but sharp\\HraLode\\HraLode\\HraLode.csproj",
       "packagesPath": "C:\\Users\\patri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\patri\\OneDrive\\Dokumenty\\C but sharp\\HraLode\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\patri\\OneDrive\\Dokumenty\\C but sharp\\HraLode\\HraLode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\patri\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FF595F54-196B-4F96-87EA-1E72F389F03A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HraLode", "HraLode\HraLode.csproj", "{FF595F54-196B-4F96-87EA-1E72F389F03A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

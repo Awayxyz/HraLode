@@ -1,6 +1,6 @@
 ﻿// Patrik Mašlaň, 2.B, 11.6.2022, PVA, Lodě
 
-using ConsoleApp1;
+using HraLode;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 

@@ -1,0 +1,15 @@
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\bin\Debug\net6.0\HraLode.exe
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\bin\Debug\net6.0\HraLode.deps.json
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\bin\Debug\net6.0\HraLode.runtimeconfig.json
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\bin\Debug\net6.0\HraLode.dll
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\bin\Debug\net6.0\HraLode.pdb
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\HraLode.csproj.AssemblyReference.cache
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\HraLode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\HraLode.AssemblyInfoInputs.cache
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\HraLode.AssemblyInfo.cs
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\HraLode.csproj.CoreCompileInputs.cache
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\HraLode.dll
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\refint\HraLode.dll
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\HraLode.pdb
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\HraLode.genruntimeconfig.cache
+C:\Users\patri\OneDrive\Dokumenty\C but sharp\HraLode\HraLode\obj\Debug\net6.0\ref\HraLode.dll
