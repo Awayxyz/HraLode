@@ -1,7 +1,4 @@
-﻿
-using System.Net.Sockets;
-
-namespace ConsoleApp1;
+﻿namespace ConsoleApp1;
 
 public class LodeCore
 {
@@ -12,8 +9,8 @@ public class LodeCore
     public const int VelikostHracihoPole = 7;
     
     public const string ZnakLode = "\u2587";
-    public const string ZnakZasahu = "\u2573";
-    public const string ZnakStrely = "\u20E3";  
+    private const string ZnakZasahu = "\u2573";
+    private const string ZnakStrely = "\u25A2";  
 
     // vrati pole do puvodni podoby
     public void VynulujPole(string[,] hracPole)
@@ -26,9 +23,7 @@ public class LodeCore
             }
         }
     }
-
     
-
     // vychozi nastaveni pole hrace na zacatku hry
     public void PostavPoleHrace(string[,] hracPole)
     {
@@ -114,7 +109,7 @@ public class LodeCore
             }
             catch (ArgumentException)
             {
-                Console.WriteLine("Na souřadnicích, kde jste loď položily, se loď překrývá s jinou lodí. Zkuste to znovu.");
+                Console.WriteLine("Na souřadnicích, kde jste loď položili, se loď překrývá s jinou lodí. Zkuste to znovu.");
                 continue;
             }
             catch (Exception)
@@ -131,11 +126,11 @@ public class LodeCore
     public void PolozLodNaPole(string Xhodnota, string Yhodnota, int delkaLodi, string smer, string[,] poleHrace)
     {
         int radek = int.Parse(Yhodnota) - 1;
-        int sloupec;
-        if (!int.TryParse(Xhodnota, out sloupec))
+        if (!int.TryParse(Xhodnota, out int sloupec))
         {
+            // 65 - A
             sloupec = (int)Xhodnota.ToCharArray()[0] - 65;
-            if (sloupec > VelikostHracihoPole - 1 || sloupec < 0) throw new IndexOutOfRangeException();
+            if (sloupec is > VelikostHracihoPole - 1 or < 0) throw new IndexOutOfRangeException();
         }
         
         switch (smer)
@@ -420,7 +415,7 @@ public class LodeCore
                     // kontrola primo pod sebou
                     try
                     {
-                        if(poleHrace[radek, sloupec + 1] == ZnakLode) throw new ArgumentException();
+                        if(poleHrace[radek, sloupec + i] == ZnakLode) throw new ArgumentException();
                     }
                     catch (IndexOutOfRangeException)
                     { }
@@ -449,9 +444,8 @@ public class LodeCore
         // loop samotne hry
         while (true)
         {
-            VykresliPoleHrace(hracPole);
             Console.WriteLine();
-            Console.Write("Napiš souřadnice, na které chceš vystřelit: ");
+            Console.Write("Napište souřadnice, na které chcete vystřelit: ");
             string strela = Console.ReadLine()!;
             char strelaSloupecPismeno = strela.Substring(0, 1).ToCharArray()[0];
             int strelaRadekCislo;
@@ -463,14 +457,13 @@ public class LodeCore
                 Console.WriteLine("Nesprávný input. Zkuste to znovu.");
                 continue;
             }
-            
-            int radekStrely, sloupecStrely;
-            radekStrely = strelaRadekCislo - 1;
-            sloupecStrely = (int)strelaSloupecPismeno - 65;
+
+            int radekStrely = strelaRadekCislo - 1;
+            int sloupecStrely = (int)strelaSloupecPismeno - 65;
 
             if (zasahleIndexy.Contains(new Tuple<int, int>(radekStrely, sloupecStrely)))
             {
-                Console.WriteLine("Na tyto souřadnice jste již vystřelily. Zkuste to znova.");
+                Console.WriteLine("Na tyto souřadnice jste již vystřelili. Zkuste to znova.");
                 continue;
             }
             
@@ -519,6 +512,8 @@ public class LodeCore
             {
                 hracPole[radekStrelyProtihrace, sloupecStrelyProtihrace] = ZnakStrely;
             }
+            
+            VykresliPoleHrace(hracPole);
             
             if (zasahleLodeProtihrace.Count is 13 or > 13)
             {

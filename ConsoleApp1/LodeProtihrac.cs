@@ -1,6 +1,4 @@
-﻿using System.Threading.Channels;
-
-namespace ConsoleApp1;
+﻿namespace ConsoleApp1;
 
 public class LodeProtihrac
 {

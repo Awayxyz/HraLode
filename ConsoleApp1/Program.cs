@@ -1,4 +1,4 @@
-﻿// Patrik Mašlaň, 2.B, 11.6.2022, PVA, Program Lodě
+﻿// Patrik Mašlaň, 2.B, 11.6.2022, PVA, Lodě
 
 using ConsoleApp1;
 
@@ -19,15 +19,9 @@ core.VynulujPole(nepritelPoleZasahy);
 
 protihrac.VygenerujPoleNepritele(nepritelPole);
 
-// test
-core.VykresliPoleHrace(nepritelPole);
-// test
-
 // Pravidla hry
-Console.WriteLine("Potopte nepřátelské lodě dříve, než on ty Vaše!\n");
+Console.WriteLine("Potopte nepřátelské lodě dříve než on ty Vaše!\n");
 
 core.PostavPoleHrace(hracPole);
 
 core.ZahajHru(hracPole, nepritelPole, nepritelPoleZasahy);
-
-
